@@ -1,0 +1,17 @@
+version: "3.8"
+
+services:
+  postgres:
+    image: postgres:latest
+    container_name: postgre
+    ports:
+      - "5432"
+    environment:
+      POSTGRES_DB: smartcardb
+      POSTGRES_USER: smartcardb_user
+      POSTGRES_PASSWORD: smartcardb123
+    volumes:
+      - D:/docker/smartcardb:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
